@@ -7,6 +7,9 @@ plugins {
     signing
 }
 
+group = property("GROUP").toString()
+version = property("VERSION_NAME").toString()
+
 android {
     namespace = "io.github.lucascordeiro.ymir.test"
     compileSdk = 36

@@ -9,6 +9,9 @@ plugins {
     signing
 }
 
+group = property("GROUP").toString()
+version = property("VERSION_NAME").toString()
+
 kotlin {
     androidLibrary {
         namespace = "io.github.lucascordeiro.ymir.core"
