@@ -1,4 +1,4 @@
-[![Maven Central](https://img.shields.io/maven-central/v/io.github.r1b2ns.ymir/core.svg)](https://central.sonatype.com/artifact/io.github.r1b2ns.ymir/core)
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.lucas-cordeiro.ymir/core.svg)](https://central.sonatype.com/artifact/io.github.lucas-cordeiro.ymir/core)
 [![Kotlin](https://img.shields.io/badge/kotlin-2.4.20-blue.svg?logo=kotlin)](http://kotlinlang.org)
 ![badge-android](http://img.shields.io/badge/platform-android-6EDB8D.svg?style=flat)
 ![badge-ios](http://img.shields.io/badge/platform-ios-CDCDCD.svg?style=flat)
@@ -7,8 +7,6 @@
 # Ymir: Custom ViewModel Library for Kotlin Multiplatform
 
 Welcome to **Ymir**! This library provides a flexible and efficient way to manage UI state and actions in your Android and iOS applications using a custom implementation of ViewModel. The library is designed to simplify the handling of UI state changes and actions while leveraging the power of Kotlin's coroutines and Flow APIs.
-
-This is a fork of [Ymir](https://github.com/lucas-cordeiro/ymir) by Lucas Cordeiro. It turns `core` into a Kotlin Multiplatform library and keeps the original package, `io.github.lucascordeiro.ymir.core`. See [NOTICE](NOTICE) for the changes.
 
 ## Table of Contents
 
@@ -37,7 +35,7 @@ In a Kotlin Multiplatform module, add the dependency to `commonMain`:
 kotlin {
     sourceSets {
         commonMain.dependencies {
-            implementation("io.github.r1b2ns.ymir:core:[last-version]")
+            implementation("io.github.lucas-cordeiro.ymir:core:[last-version]")
         }
     }
 }
@@ -47,11 +45,11 @@ In an Android-only module, add it to `dependencies`:
 
 ```kotlin
 dependencies {
-    implementation("io.github.r1b2ns.ymir:core:[last-version]")
+    implementation("io.github.lucas-cordeiro.ymir:core:[last-version]")
 }
 ```
 
-Replace [last-version] with the latest version available on [Maven Central](https://central.sonatype.com/artifact/io.github.r1b2ns.ymir/core).
+Replace [last-version] with the latest version available on [Maven Central](https://central.sonatype.com/artifact/io.github.lucas-cordeiro.ymir/core).
 
 Requirements:
 
@@ -61,8 +59,8 @@ Requirements:
 
 ## Migrating from 1.x
 
-- Replace `io.github.lucas-cordeiro.ymir:core` with `io.github.r1b2ns.ymir:core`. The package did not change, so your imports keep working.
-- Do not keep both artifacts in the same build: they declare the same classes.
+- The package did not change, so your imports keep working.
+- Android `minSdk` went from 21 to 23.
 - `ObserveActions` reads `LocalLifecycleOwner` from `androidx.lifecycle.compose`. Activities and fragments with Compose already provide it.
 
 ## Usage
@@ -144,7 +142,7 @@ To use the testing utilities provided by the library, add the following dependen
 
 ```kotlin
 dependencies {
-    testImplementation("io.github.r1b2ns.ymir:test:[last-version]")
+    testImplementation("io.github.lucas-cordeiro.ymir:test:[last-version]")
 }
 ```
 Here's an example of how to write tests using the `ViewModelObserver`:
@@ -192,6 +190,6 @@ Additionally, the `app` module includes a unit test example for the ViewModel, d
 
 ## Contributions and Feedback
 
-Suggestions, improvements and feedback are welcome! If you have any ideas, encounter a bug, or would like to share your thoughts, feel free to open an issue.
+As the sole developer of this library, I am open to suggestions, improvements, and feedback to make it even better! If you have any ideas, encounter a bug, or would like to share your thoughts, feel free to open an issue.
 
-Ymir was created by [Lucas Cordeiro](https://github.com/lucas-cordeiro). Thanks for the original library.
+Your contributions and feedback are highly appreciated as they help enhance the quality and functionality of this library.
