@@ -53,10 +53,6 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 }
 
-mavenPublishing {
-    coordinates("io.github.lucas-cordeiro.ymir", "test")
-}
-
 signing {
     useGpgCmd()
 }
